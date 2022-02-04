@@ -8,3 +8,4 @@ PA for C950 (Data Structures and Algorithms II)
 - Which data data structures are self-adjusting?
   - Develop a lookup function
 - Provide a GUI
+- Polyinomial time or better
