@@ -17,7 +17,7 @@ def create_package_hash():
         writer = csv.reader(pf, delimiter=',')
         next(writer)
         for i in writer:
-            package_hash.insert(i[0], list(i[1:7]))
+            package_hash.insert(i[0], list(i[1:8]))
     return package_hash
 
 
