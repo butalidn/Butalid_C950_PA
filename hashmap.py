@@ -65,12 +65,11 @@ class HashMap:
                 if i[0] == key:
                     return i
 
-    def update_time(self, key, time, status):
+    def update_time(self, key, status):
         key_hash = hash(key) % self.__size
         if self.__table[key_hash]:
             for i in self.__table[key_hash]:
                 if i[0] == key:
-                    i[1][4] = time
                     i[1][7] = status
 
     def update_address(self, key, new_address):
@@ -114,6 +113,13 @@ class HashMap:
             for i in self.__table[key_hash]:
                 if i[0] == key:
                     return i[1][4]
+
+    def get_status(self, key):
+        key_hash = hash(key) % self.__size
+        if self.__table[key_hash]:
+            for i in self.__table[key_hash]:
+                if i[0] == key:
+                    return i[1][7]
 
     # Time Complexity: Average should be O(N) because the functions adds the id
     # of every package ID. Worst case would be O(N^2) if hashing function

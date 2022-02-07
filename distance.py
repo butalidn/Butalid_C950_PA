@@ -44,20 +44,29 @@ class Distance:
             address = '3575 W Valley Central Sta bus Loop'
         return self.address_list.index(address)
 
-    def min_distance(self, from_address, packages, package_list):
+    def min_distance(self, from_address, packages, package_list, start_time, truck_name):
         unvisited = []
         total_dist = 0
         address_set = set()
+        timer = start_time
 
         package_address_list = []
 
         u = from_address
 
         for i in package_list:
-            unvisited.append(packages.get_address(i))
-            package_address_list.append([packages.get_address(i), [i]])
+            address = packages.get_address(i)
+            unvisited.append(address)
+            if address in address_set:
+                for x in package_address_list:
+                    if address == x[0]:
+                        x[1].append(i)
+            else:
+                address_set.add(address)
+                package_address_list.append([packages.get_address(i), [i]])
 
-        print(package_address_list)
+        # print(package_address_list)
+        # print(address_set)
 
         while unvisited:
             min_dist = unvisited[0]
@@ -76,17 +85,25 @@ class Distance:
                     time_list = i[1]
                     break
 
-            for x in time_list:
-                if dist:
-                    ot = datetime.strptime(packages.get_time(x), '%I:%M %p')
-                    ot += timedelta(minutes=dist / 18 * 60)
+            for x in range(len(time_list)):
+                if not x:
 
-                    old_time = ot.time().strftime('%I:%M %p')
-                    packages.update_time(x, old_time, 'Delivered')
+                    ot = datetime.strptime(timer, '%I:%M:%S %p')
+                    ot += timedelta(minutes=(dist / 18 * 60))
 
+                    old_time = ot.time().strftime('%I:%M:%S %p')
+                    timer = old_time
+                    packages.update_time(time_list[x], f'Delivered at {old_time}')
+                else:
+                    ot = datetime.strptime(timer, '%I:%M:%S %p')
+                    old_time = ot.time().strftime('%I:%M:%S %p')
+                    timer = old_time
+                    packages.update_time(time_list[x], f'Delivered at {old_time}')
             total_dist += dist
             u = next_address
             unvisited.remove(min_dist)
 
         total_dist += self.distance_between(from_address, u)
-        return total_dist
+        # print(f'{truck_name} got back at {timer} and traveled {total_dist} miles')
+        # return total_dist
+        return [truck_name, timer, total_dist]

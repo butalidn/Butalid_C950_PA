@@ -14,10 +14,13 @@ class Truck:
     def load_package(self, packages):
         self.packages = packages
 
-    def deliver_package(self, time):
+    def get_package_list(self):
+        return self.packages
+
+    def deliver_package(self, time, truck_name):
         for i in self.packages:
-            self.all_packages.update_time(i, time, 'En Route')
-        print(self.truck_distance.min_distance(self.hub, self.all_packages, self.packages))
+            self.all_packages.update_time(i, 'En Route')
+        return self.truck_distance.min_distance(self.hub, self.all_packages, self.packages, time, truck_name)
 
 
 def load_trucks(trucks, all_packages):
@@ -34,6 +37,9 @@ def load_trucks(trucks, all_packages):
                 all_packages.get_package(i)[1][6]:
             truck_packages1.append(i)
             package_list[i - 1] = 0
+        elif all_packages.get_package(i)[0] == 26:
+            truck_packages2.append(i)
+            package_list[i - 1] = 0
         elif all_packages.get_package(i)[1][6] == 'Can only be on truck 2':
             truck_packages2.append(i)
             package_list[i - 1] = 0
@@ -43,10 +49,10 @@ def load_trucks(trucks, all_packages):
         elif 'Must' in all_packages.get_package(i)[1][6]:
             truck_packages1.append(i)
             package_list[i - 1] = 0
-        elif all_packages.get_package(i)[1][4] == 'EOD' and len(truck_packages1) < 16 and not \
-                all_packages.get_package(i)[1][6]:
-            truck_packages1.append(i)
-            package_list[i - 1] = 0
+        # elif all_packages.get_package(i)[1][4] == 'EOD' and len(truck_packages1) < 16 and not \
+        #         all_packages.get_package(i)[1][6]:
+        #     truck_packages1.append(i)
+        #     package_list[i - 1] = 0
 
     for j in package_list:
         if j and not all_packages.get_package(j)[0] == 9:
