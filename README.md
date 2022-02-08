@@ -17,7 +17,16 @@ Checklist for Documentation:
   - Describe at least two strengths 
   - Verify the algorithm meets all requirements
   - Identify two other algorithms that could have been 
-    - Describe how each algorithm is different from the solution algorithm
+    - Describe how each algorithm is different from the solution algorithm asahashsh
+- Describe what you would do different if did the project again
+- Justify the data structure you identified in part D by doing the following:
+
+- Verify that the data structure used in the solution meets all requirements in the scenario.
+    -Explain how the time needed to complete the look-up function is affected by changes in the number of packages to be delivered.
+    -Explain how the data structure space usage is affected by changes in the number of packages to be delivered.
+    -Describe how changes to the number of trucks or the number of cities would affect the look-up time and the space usage of the data structure.
+ -Identify two other data structures that could meet the same requirements in the scenario.
+    -Describe how each data structure identified in part K2 is different from the data structure used in the solution.
 
 ### Common Questions
 - Identify the algorithm
