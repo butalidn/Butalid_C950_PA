@@ -8,6 +8,8 @@ I solved this project using the Nearest Neighbors Algorithm. There is a simple G
 2) Find the status of all packages at a specific time
 3) Find information about a package using its package id
 
+One requirement was to create a data structure so I created a hash map with insertion, lookup, and update functionality. No external libraries were allowed to be used.
+
 ### Scenario
 The Western Governors University Parcel Service (WGUPS) needs to determine an efficient route and delivery distribution for their Daily Local Deliveries (DLD) because packages are not currently being consistently delivered by their promised deadline. The Salt Lake City DLD route has three trucks, two drivers, and an average of 40 packages to deliver each day. Each package has specific criteria and delivery requirements.
 
