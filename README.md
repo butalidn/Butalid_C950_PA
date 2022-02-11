@@ -34,9 +34,7 @@ while there are unvisited addresses in a list:
 		
 			continue through loop
 			
-if distance between starting address and j is less than or equal to
-
-to the distance between the starting address and min_dist:
+if distance between starting address and j is less than or equal to to the distance between the starting address and min_dist:
 
 			min_dist is now equal to j
 			
