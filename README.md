@@ -40,11 +40,11 @@ Pseudocode for Nearest Neighbors Algorithm
 
 				min_dist is now equal to j
 
-		\t at end of for loop:
+		at end of for loop:
 
-		\t next_address = min_dist
+		next_address = min_dist
 
-		\t distance between the starting address and next_address is calculated and saved
+		distance between the starting address and next_address is calculated and saved
 	
 
 
