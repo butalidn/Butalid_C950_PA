@@ -25,26 +25,26 @@ General steps for Nearest Neighbor Algorithm
 Pseudocode for Nearest Neighbors Algorithm
 
 
-while there are unvisited addresses in a list:
+	while there are unvisited addresses in a list:
 
-	min_dist = first address in unvisited list
-	
-	for j in unvisited list:
-	
-		if equal to min_dist:
-		
-			continue through loop
-			
-		if distance between starting address and j is less than or equal to to the 
-		distance between the starting address and min_dist:
+		min_dist = first address in unvisited list
 
-			min_dist is now equal to j
-			
-	at end of for loop:
-	
-	next_address = min_dist
-	
-	distance between the starting address and next_address is calculated and saved
+		for j in unvisited list:
+
+			if equal to min_dist:
+
+				continue through loop
+
+			if distance between starting address and j is less than or equal to to the 
+			distance between the starting address and min_dist:
+
+				min_dist is now equal to j
+
+		\t at end of for loop:
+
+		\t next_address = min_dist
+
+		\t distance between the starting address and next_address is calculated and saved
 	
 
 
