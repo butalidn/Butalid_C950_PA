@@ -23,17 +23,29 @@ General steps for Nearest Neighbor Algorithm
 6.	Add up all the values together and add the edge from the last ‘v’ to the original vertex 
 
 Pseudocode for Nearest Neighbors Algorithm
+
 while there are unvisited addresses in a list:
+
 	min_dist = first address in unvisited list
+	
 	for j in unvisited list:
+	
 		if equal to min_dist:
+		
 			continue through loop
+			
 *if distance between starting address and j is less than or equal to
+
 to the distance between the starting address and min_dist:
+
 			min_dist is now equal to j
+			
 	at end of for loop:
+	
 	next_address = min_dist
+	
 	distance between the starting address and next_address is calculated and saved
+	
 
 
 ### Here are requirements from the project:
