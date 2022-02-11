@@ -24,6 +24,7 @@ General steps for Nearest Neighbor Algorithm
 
 Pseudocode for Nearest Neighbors Algorithm
 
+
 while there are unvisited addresses in a list:
 
 	min_dist = first address in unvisited list
