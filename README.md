@@ -14,13 +14,14 @@ One requirement was to create a data structure so I created a hash map with inse
 
 This is the basic pseudocode my program followed for the Nearest Neighbor algorithm
 
-General steps for Nearest Neighbor Algorithm (TLMaths, 2014)
+General steps for Nearest Neighbor Algorithm 
 1.	Create a list of all vertices to be visited and called it ‘unvisited’ or ‘u’
 2.	Start at a vertex
 3.	Find the edge with the smallest value in the unvisited list connected to the current vertex. Call the connecting vertex ‘v’
 4.	Remove the current vertex and ‘v’ from the unvisited list. Record the edge’s value
 5.	Repeat steps 2 - 4 until the unvisited list is empty
 6.	Add up all the values together and add the edge from the last ‘v’ to the original vertex 
+
 Pseudocode for Nearest Neighbors Algorithm
 while there are unvisited addresses in a list:
 	min_dist = first address in unvisited list
