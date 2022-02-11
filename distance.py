@@ -1,14 +1,20 @@
-from hashmap import *
-from csv_handler import *
 from datetime import datetime
 from datetime import timedelta
 
 
+# This class is used to create a the distance graph and an address list
+# All information pertaining distance betweens addresses is dealt in this class
 class Distance:
     def __init__(self, distance_data, address_list):
         self.distance_data = distance_data
         self.address_list = address_list
 
+    # Two addresses are given and the indexes of the addresses in the address list are found
+    # and then those indexes are used in the distance data graph to find the corresponding distance.
+    # The distance is found no matter the order of the addresses given
+    # Time Complexity: O(N) because the find index function takes O(N) at worst case
+    # Space Compleixty: O(1) because only variables are declared
+    # Return: Returns the float value when found in the distance data graph
     def distance_between(self, address1, address2):
         if address1 == '3575 W Valley Central Station bus Loop':
             address1 = '3575 W Valley Central Sta bus Loop'
@@ -39,11 +45,32 @@ class Distance:
         else:
             return 0
 
+    # Time Complexity: O(N) because of the .index() function
+    # Space Complexity: O(1) because no variable or structures are created
+    # Return: Returns the index of the given index in the address list
     def find_index(self, address):
         if address == '3575 W Valley Central Station bus Loop':
             address = '3575 W Valley Central Sta bus Loop'
         return self.address_list.index(address)
 
+    # This function is where the Nearest Neighbor algorithm is implemented
+    # The function takes in the list of package IDs that must be visited
+    # A set of the distinct addresss that must be visited is created
+    # A list containing an addresses and the package IDs that are going to that address
+    # is created
+
+    # A list of the unvisited addresses is created and looped through to find the shortest
+    # distance from the current address which starts at the WGU hub. That address is then
+    # removed from the unvisited list and the algorithm loops through until the list is empty
+
+    # The milage from the current address to the next address is calculated and the packaage's
+    # status is updated
+    # Time Complexity: O(N^3) at worst because of the while and for loops using the distance between
+    # function which also takes O(N) time
+    # Space Complexity: O(N^2) because of the 2D list but at worst could be O(N^3)
+    # if all packages are going to the same address. This would be a rare case and would basically be O(N^2)
+    # if this happened. Time compelxity would also basically be O(1).
+    # Returns a list containing the truck name, time the truck returns to the hub, and the milage it took
     def min_distance(self, from_address, packages, package_list, start_time, truck_name):
         unvisited = []
         total_dist = 0
@@ -54,6 +81,9 @@ class Distance:
 
         u = from_address
 
+        # Time Complexity: O(N^2) on average because of the double for loop. At worst case could be
+        # O(N^3) because of the 'in' function for the set if hashed inefficiently
+        # Space Compleixty: O(1)
         for i in package_list:
             address = packages.get_address(i)
             unvisited.append(address)
@@ -65,9 +95,9 @@ class Distance:
                 address_set.add(address)
                 package_address_list.append([packages.get_address(i), [i]])
 
-        # print(package_address_list)
-        # print(address_set)
-
+        # Time Complexity: At worst would be O(N^3) because of looping through the unvisisted list twice
+        # and the distance bewteen function takes O(N) time.
+        # Space Complexity: O(N^2) at worst because of the time list in the while loop
         while unvisited:
             min_dist = unvisited[0]
             for j in unvisited:
@@ -85,6 +115,10 @@ class Distance:
                     time_list = i[1]
                     break
 
+            # Time Complexity: O(N) on average beacuse of for loop but O(N^2)
+            # at worst because of the update time function if the hash function
+            # is inefficient
+            # Space Complexity: O(N) because of variable in the for loop
             for x in range(len(time_list)):
                 if not x:
 
@@ -104,6 +138,4 @@ class Distance:
             unvisited.remove(min_dist)
 
         total_dist += self.distance_between(from_address, u)
-        # print(f'{truck_name} got back at {timer} and traveled {total_dist} miles')
-        # return total_dist
         return [truck_name, timer, total_dist]

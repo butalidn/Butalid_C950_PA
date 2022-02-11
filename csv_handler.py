@@ -9,7 +9,7 @@ import csv
 # for each package id.
 # Time Complexity: O(N) because the csv reader goes through and inserts the data
 # for each row in the csv file. N being the amount of rows in the csv file.
-# Space Complexity: O(N^2) because of the created hashmap
+# Space Complexity: O(N^2) because of the created hashmap using 2D lists
 # Return: Returns a hashmap object with the data from the csv file
 def create_package_hash():
     package_hash = HashMap()
@@ -21,6 +21,9 @@ def create_package_hash():
     return package_hash
 
 
+# This function reads the .csv file and appends an array of distances to a list
+# Time Complexity: O(N) because of the for loop appending to the list
+# Space Complexity: O(N^2) because the graph is a 2D list
 def create_distance_graph():
     distance_graph = []
     with open("Data/WGUPS Distance Table.csv") as dt:
@@ -32,6 +35,9 @@ def create_distance_graph():
     return distance_graph
 
 
+# This function reads the .csv file and appends each address to a list
+# Time Complexity: O(N) because of the for loop appending to the list
+# Space Complexity: O(N) because a list is created
 def create_address_list():
     address_list = []
     with open("Data/WGUPS Distance Table.csv") as al:
