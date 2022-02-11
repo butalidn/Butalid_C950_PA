@@ -10,6 +10,33 @@ I solved this project using the Nearest Neighbors Algorithm. There is a simple G
 
 One requirement was to create a data structure so I created a hash map with insertion, lookup, and update functionality. No external libraries were allowed to be used.
 
+### The algorithm I used
+
+This is the basic pseudocode my program followed for the Nearest Neighbor algorithm
+
+General steps for Nearest Neighbor Algorithm (TLMaths, 2014)
+1.	Create a list of all vertices to be visited and called it ‘unvisited’ or ‘u’
+2.	Start at a vertex
+3.	Find the edge with the smallest value in the unvisited list connected to the current vertex. Call the connecting vertex ‘v’
+4.	Remove the current vertex and ‘v’ from the unvisited list. Record the edge’s value
+5.	Repeat steps 2 - 4 until the unvisited list is empty
+6.	Add up all the values together and add the edge from the last ‘v’ to the original vertex 
+Pseudocode for Nearest Neighbors Algorithm
+while there are unvisited addresses in a list:
+	min_dist = first address in unvisited list
+	for j in unvisited list:
+		if equal to min_dist:
+			continue through loop
+*if distance between starting address and j is less than or equal to
+to the distance between the starting address and min_dist:
+			min_dist is now equal to j
+	at end of for loop:
+	next_address = min_dist
+	distance between the starting address and next_address is calculated and saved
+
+
+### Here are requirements from the project:
+
 ### Scenario
 The Western Governors University Parcel Service (WGUPS) needs to determine an efficient route and delivery distribution for their Daily Local Deliveries (DLD) because packages are not currently being consistently delivered by their promised deadline. The Salt Lake City DLD route has three trucks, two drivers, and an average of 40 packages to deliver each day. Each package has specific criteria and delivery requirements.
 
