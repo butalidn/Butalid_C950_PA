@@ -75,7 +75,7 @@ This is the basic pseudocode my program followed for the Nearest Neighbor algori
 
 ![Screenshot (82)](https://user-images.githubusercontent.com/69161658/172490756-d1a3e6e7-4261-4819-b997-456cd84b413f.png)
 
-![Screenshot (83)](https://user-images.githubusercontent.com/69161658/172490760-53126397-ce7b-48b3-b1ee-ba29b69aa6bc.png)
+![Screenshot (85)](https://user-images.githubusercontent.com/69161658/172490996-01e3ee26-64fa-4e04-bb14-97703b0f821f.png)
 
-![Screenshot (84)](https://user-images.githubusercontent.com/69161658/172490769-42fb30f5-7f13-4971-9683-32fe28d501a7.png)
+![Screenshot (86)](https://user-images.githubusercontent.com/69161658/172491013-a6c24a40-b4bc-4b06-b370-926cd62aab56.png)
 
