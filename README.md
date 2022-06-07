@@ -1,5 +1,4 @@
-# Butalid_C950_PA
-This Project was the Peformance Assessment for **C950 (Data Structures and Algorithms II)**
+# Delivery Package System: Data Structures and Algorithms II 
 
 Run 'py main.py' to run program
 
