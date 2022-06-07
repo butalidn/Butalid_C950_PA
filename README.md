@@ -11,7 +11,7 @@ I solved this project using the Nearest Neighbors Algorithm. There is a simple G
 2) Find the status of all packages at a specific time
 3) Find information about a package using its package id
 
-One requirement was to create a data structure so I created a hash map with insertion, lookup, and update functionality. No external libraries were allowed to be used.
+One requirement was to create a data structure so I created a customized hash map with insertion, lookup, and update functionalities. No external libraries were allowed to be used.
 
 ### The algorithm I used
 
