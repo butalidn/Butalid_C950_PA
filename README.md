@@ -6,7 +6,7 @@ The goal of the project was to develop an algorithm that kept the total distance
 
 ***Run 'py main.py' to run program***
 
-I solved this project using the Nearest Neighbors Algorithm. There is a simple GUI that allows you to:
+I solved this probelm using the Nearest Neighbors Algorithm. There is a simple GUI that allows you to:
 1) Find the total mileage of all trucks' when all packages have been delivered
 2) Find the status of all packages at a specific time
 3) Find information about a package using its package id
