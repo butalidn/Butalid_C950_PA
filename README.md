@@ -1,7 +1,7 @@
 # Delivery Package System: Data Structures and Algorithms II 
 
 This project was for Data Structures and Algorithms II. The application consists of a fleet of trucks delivering packages to various locations.
-The goal of the project was to develop an algorithm that kept the total distance the trucks travel under an amount outlined by the project requirements.
+The goal of the project was to develop an algorithm that kept the total distance the trucks traveled under an amount outlined by the project requirements.
 
 
 ***Run 'py main.py' to run program***
