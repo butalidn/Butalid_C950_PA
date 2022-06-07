@@ -73,4 +73,9 @@ This is the basic pseudocode my program followed for the Nearest Neighbor algori
 •   The day ends when all 40 packages have been delivered.
 
 
-![Packages_Screenshot_10 00](https://user-images.githubusercontent.com/69161658/172489395-443b45ef-cff9-4faf-ac41-fc4c0a082e19.jpg)
+![Screenshot (82)](https://user-images.githubusercontent.com/69161658/172490756-d1a3e6e7-4261-4819-b997-456cd84b413f.png)
+
+![Screenshot (83)](https://user-images.githubusercontent.com/69161658/172490760-53126397-ce7b-48b3-b1ee-ba29b69aa6bc.png)
+
+![Screenshot (84)](https://user-images.githubusercontent.com/69161658/172490769-42fb30f5-7f13-4971-9683-32fe28d501a7.png)
+
