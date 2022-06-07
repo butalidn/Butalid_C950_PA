@@ -1,6 +1,10 @@
 # Delivery Package System: Data Structures and Algorithms II 
 
-Run 'py main.py' to run program
+This project was for Data Structures and Algorithms II. The application consists of a fleet of trucks delivering packages to various locations.
+The goal of the project was to develop an algorithm that kept the total distance the trucks travel under an amount outlined by the project requirements.
+
+
+***Run 'py main.py' to run program***
 
 I solved this project using the Nearest Neighbors Algorithm. There is a simple GUI that allows you to:
 1) Find the total mileage of all trucks' when all packages have been delivered
@@ -68,3 +72,5 @@ This is the basic pseudocode my program followed for the Nearest Neighbor algori
 
 •   The day ends when all 40 packages have been delivered.
 
+
+![Packages_Screenshot_10 00](https://user-images.githubusercontent.com/69161658/172489395-443b45ef-cff9-4faf-ac41-fc4c0a082e19.jpg)
